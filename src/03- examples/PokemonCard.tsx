@@ -11,7 +11,7 @@ import { useLayoutEffect, useRef } from "react"
 
 export const PokemonCard = ({id, name, sprites=[]}: {id:number, name:string, sprites: string[]}) => {
     
-    const h2Ref = useRef<HTMLHeadElement>(null);
+    const h2Ref = useRef<HTMLHeadingElement>(null);
     useLayoutEffect(() => {
         const { height, width } = h2Ref.current!.getBoundingClientRect();
         console.log( {height, width} )
