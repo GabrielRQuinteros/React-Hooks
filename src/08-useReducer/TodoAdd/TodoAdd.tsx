@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unsafe-function-type */
 import type React from "react"
 import type { TodoState } from "../todoReducer";
 import { useForm } from "../../hooks/useForm";
 
-export const TodoAdd = ( {addTodo} ) => {
+export const TodoAdd = ( {addTodo}: {addTodo: Function} ) => {
   
   const { description, onInputChange, onResetForm } = useForm({
           description:''
