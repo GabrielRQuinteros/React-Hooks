@@ -3,11 +3,14 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
     "target": "ES2022",
     "lib": ["ES2023"],
-    "module": "ESNext",
     "skipLibCheck": true,
+    "module": "ESNext", /// Neceasrio para Jest + Ts
+    "esModuleInterop": true, /// Necesario para Jest + Ts
+    "allowSyntheticDefaultImports": true, /// Necesario para Jest + Ts
+    "jsx": "react-jsx", /// Necesario para Jest + Ts
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
@@ -21,5 +24,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["vite.config.ts"]
+  "include": ["src","vite.config.ts"]
 }
