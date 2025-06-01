@@ -8,13 +8,11 @@ export const useCounter = (
     const [counter, setCounter] = useState(start);
 
     const increment = ( value = 1 ) => {
-        const newValue = counter + value;
-        setCounter( newValue );
+        setCounter( (current) => current + value );
     };
 
     const decrement = ( value = 1 ) => {
-        const newValue = counter - value;
-        setCounter( newValue );
+        setCounter( (current) => current + value );
     }
 
     const reset = () => {
