@@ -12,7 +12,7 @@ export const useCounter = (
     };
 
     const decrement = ( value = 1 ) => {
-        setCounter( (current) => current + value );
+        setCounter( (current) => current - value );
     }
 
     const reset = () => {

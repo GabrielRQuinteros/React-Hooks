@@ -30,16 +30,22 @@ describe('Tests del Custom Hook useCounter', () => {
         // Es necesario envolver la funcion que cambia el valor del state en una
         // funciton act()
         // Ejemplo abajo:
-        act(() => increment() );
-        expect( result.current.counter ).toBe(1);
+        act(() => {
+            increment(5);
+            increment(3);
+        } );
+        expect( result.current.counter ).toBe(8);
     });
     
     
     test('03- Prueba se decrementa Correctamente', () => {
         const { result } = renderHook( () => useCounter(5) );
         const { decrement } = result.current;
-        act(() => decrement() );
-        expect( result.current.counter ).toBe(4);
+        act(() => {
+            decrement(4);
+            decrement(7);
+        } );
+        expect( result.current.counter ).toBe(-6);
     });
     
     
