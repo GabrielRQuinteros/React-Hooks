@@ -5,6 +5,7 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "jsx": "react-jsx"  /// Necesario para Jest + Ts
+    "jsx": "react-jsx",  // o "react" si usás React clásico con import React
+    "esModuleInterop": true,
   }
 }

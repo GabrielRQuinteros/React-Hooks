@@ -6,7 +6,7 @@ export const useForm = <T extends object>(initialFormState: T) => {
 
     const onInputChange = ( event: React.ChangeEvent<HTMLInputElement> ) => {
         const {name, value} = event.target;
-        setFormState( { ...formState, [name]:value} );
+        setFormState( (oldFormState) => ({ ...oldFormState, [name]: value }) );
     };
 
     const onResetForm = () => {
